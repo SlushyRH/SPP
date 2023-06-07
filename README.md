@@ -23,7 +23,8 @@ With Slushy's Player Prefs you can save and load virtually any data with two ver
 | Set and Get Arrays          |❌|✔️
 
 ## How to Use
-More information in the Demo Scene included in the product.
+More information in the demo script included in the 'SRH\Slushy's Player Prefs\Demo\SPP_Demo.cs'. If you need to convert any of your existing Player Prefs to SPP, just click the Convert button in
+the SRH tab in the toolbar.
 ### Save Values to Player Prefs
 ```` C#
 using SRH;

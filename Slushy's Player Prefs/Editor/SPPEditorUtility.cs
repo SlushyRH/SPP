@@ -13,31 +13,6 @@ namespace SRH
         private static readonly string STR_ERROR_CODE = "<SPP_xXxThisShitDontWork69xXx>";
         private static readonly int INT_ERROR_CODE = int.MinValue;
 
-        [MenuItem("SRH/Add Test Player Prefs", false, 1)]
-        private static void AddTest()
-        {
-            PlayerPrefs.SetString("player friend 1", "LegendR6");
-            PlayerPrefs.SetString("player friend 2", "Milanky");
-            PlayerPrefs.SetString("player friend 3", "RichoJr");
-            PlayerPrefs.SetInt("player friend 1 age", 78);
-            PlayerPrefs.SetInt("player friend 2 age", 6);
-            PlayerPrefs.SetInt("player friend 3 age", 367);
-            PlayerPrefs.SetFloat("player distance from friend 1", 0.0123f);
-            PlayerPrefs.SetFloat("player distance from friend 2", 93.48251f);
-            PlayerPrefs.SetFloat("player distance from friend 3", 183.667f);
-        }
-
-        [MenuItem("SRH/Add Test SPP", false, 1)]
-        private static void AddTestSPP()
-        {
-            SPP.Set("player position", new Vector3(0.35f, 23.5f, 103.0232f));
-            SPP.Set("player body color", Color.green);
-            SPP.Set("player name", "SlushyRH");
-            SPP.Set("player age", 19);
-            SPP.Set("has player left spawn", true);
-            SPP.SetEncrypted("password", "pussy");
-        }
-
         [MenuItem("SRH/SPP/Convert All Existing Prefs To SPP", false, 100)]
         private static void ConvertAllPrefsToSPP()
         {
