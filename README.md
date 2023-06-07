@@ -3,6 +3,9 @@ An easy to use, scalable and flexible alternative to Unity's default Player Pref
 
 With Slushy's Player Prefs you can save and load virtually any data with two very simple methods!
 
+### Disclaimer
+As of now, this tool only works on Windows machines. I don't own a Mac or Linux device so therefore can't port it, any help would be appreciated! [OSX and Linux Methods](https://github.com/SlushyRH/SPP/blob/master/Slushy's%20Player%20Prefs/Editor/SPPEditorUtility.cs#L86)
+
 ## Features
 |                             | Player Prefs     | Slushy's Player Prefs
 |-----------------------------|------------------|------------------

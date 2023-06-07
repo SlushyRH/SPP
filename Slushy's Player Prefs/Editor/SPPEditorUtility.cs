@@ -106,9 +106,9 @@ namespace SRH
             }
 
             return prefs;
-#elif UNITY_EDITOR_LINUX
-            
 #elif UNITY_EDITOR_OSX
+            
+#elif UNITY_EDITOR_LINX
             
 #endif
         }
