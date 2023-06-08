@@ -93,39 +93,46 @@ namespace SRH
         /// <returns>If it doesn't exist, it will return null.</returns>
         public static T Get<T>(string key)
         {
-            try
+            Debug.Log(SPP.HasKey(key) + "  " + key);
+
+            if (SPP.HasKey(key))
             {
-                // Get content from player prefs
-                string content = PlayerPrefs.GetString(key);
-                object value = null;
-
-                // Check if the pref is encrypted
-                if (SPPUtility.IsEncrypted(key))
+                try
                 {
-                    // Decrypt the string and convert it to a string
-                    string rawContent = content.Remove(0, 9);
-                    byte[] data = SPPUtility.Decrypt(Convert.FromBase64String(rawContent));
-                    string encrypted = Convert.ToBase64String(data);
+                    // Get content from player prefs
+                    string content = PlayerPrefs.GetString(key);
+                    object value = null;
 
-                    // Deserialize encrypted string to binary
-                    value = SPPUtility.DeserializeToBinary<object>(encrypted);
+                    // Check if the pref is encrypted
+                    if (SPPUtility.IsEncrypted(key))
+                    {
+                        // Decrypt the string and convert it to a string
+                        string rawContent = content.Remove(0, 9);
+                        byte[] data = SPPUtility.Decrypt(Convert.FromBase64String(rawContent));
+                        string encrypted = Convert.ToBase64String(data);
+
+                        // Deserialize encrypted string to binary
+                        value = SPPUtility.DeserializeToBinary<object>(encrypted);
+                    }
+                    else
+                    {
+                        // Deserialize string to binary
+                        string rawContent = content.Remove(0, 4);
+                        value = SPPUtility.DeserializeToBinary<object>(rawContent);
+                    }
+
+                    // return value as the type defined by T
+                    return (T)value;
                 }
-                else
+                catch
                 {
-                    // Deserialize string to binary
-                    string rawContent = content.Remove(0, 4);
-                    value = SPPUtility.DeserializeToBinary<object>(rawContent);
+                    // this error is thrown if the player pref is not serialized
+                    Debug.LogError($"This pref [{key}] is not a SPP Player Pref and cannot be returned. Please either convert this to a SPP Player Pref or use PlayerPrefs.GetString/Int/Float.");
+                    throw;
                 }
+            }
 
-                // return value as the type defined by T
-                return (T)value;
-            }
-            catch
-            {
-                // this error is thrown if the player pref is not serialized
-                Debug.LogError($"This pref [{key}] is not a SPP Player Pref and cannot be returned. Please either convert this to a SPP Player Pref or use PlayerPrefs.GetString/Int/Float.");
-                throw;
-            }
+            return default;
         }
         #endregion Custom Methods
     }

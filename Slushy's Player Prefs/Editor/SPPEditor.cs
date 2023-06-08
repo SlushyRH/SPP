@@ -147,13 +147,10 @@ namespace SRH
             try
             {
                 // draw all the ui shit and stuff
-                GUILayout.BeginVertical();
                 GUILayout.BeginHorizontal();
-                
-                GUILayout.BeginHorizontal();
-                GUILayout.Label("Search: ");
 
-                // update search type
+                GUILayout.BeginHorizontal(); // search bar
+                GUILayout.Label("Search: ");
                 EditorGUI.BeginChangeCheck();
                 searchType = (SearchType)EditorGUILayout.EnumPopup(searchType, GUILayout.Width(60));
                 search = GUILayout.TextField(search, GUILayout.Width(180));
@@ -161,7 +158,6 @@ namespace SRH
                 {
                     InitList(search);
                 }
-                
                 GUILayout.FlexibleSpace();
                 GUILayout.EndHorizontal();
                 GUILayout.FlexibleSpace();
@@ -207,13 +203,8 @@ namespace SRH
                 scrollPos = GUILayout.BeginScrollView(scrollPos);
                 userPrefs.DoLayoutList(); // Have the ReorderableList do its work
                 GUILayout.EndScrollView();
-                GUILayout.EndVertical();
             }
-            catch (Exception e)
-            {
-                Debug.LogError(e.Message);
-                throw;
-            }
+            catch { }
         }
 
         internal void RefreshList()

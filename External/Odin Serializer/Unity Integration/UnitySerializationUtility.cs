@@ -819,7 +819,7 @@ namespace SRH.External.OdinSerializer
                                 if (data.PrefabModificationsReferencedUnityObjects != null && data.PrefabModificationsReferencedUnityObjects.Count > 0)
                                 {
                                     //var prefabRoot = UnityEditor.PrefabUtility.FindPrefabRoot(((Component)data.Prefab).gameObject);
-                                    var instanceRoot = UnityEditor.PrefabUtility.FindPrefabRoot(((Component)unityObject).gameObject);
+                                    var instanceRoot = UnityEditor.PrefabUtility.GetOutermostPrefabInstanceRoot(((Component)unityObject).gameObject);
 
                                     foreach (var reference in data.PrefabModificationsReferencedUnityObjects)
                                     {
