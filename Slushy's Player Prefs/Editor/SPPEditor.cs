@@ -51,7 +51,7 @@ namespace SRH
         Vector2 scrollPos;
         string search;
 
-        [MenuItem("SRH/SPP/Player Prefs Viewer", false, 1)]
+        [MenuItem("Tools/SRH/SPP/Player Prefs Viewer", false, 1)]
         private static void Init()
         {
             // setup window

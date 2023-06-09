@@ -13,7 +13,7 @@ namespace SRH
         private static readonly string STR_ERROR_CODE = "<SPP_xXxThisShitDontWork69xXx>";
         private static readonly int INT_ERROR_CODE = int.MinValue;
 
-        [MenuItem("SRH/SPP/Convert All Existing Prefs To SPP", false, 100)]
+        [MenuItem("Tools/SRH/SPP/Convert All Existing Prefs To SPP", false, 100)]
         private static void ConvertAllPrefsToSPP()
         {
             bool option = EditorUtility.DisplayDialog("Convert Player Pref",
@@ -41,10 +41,10 @@ namespace SRH
             }
         }
 
-        [MenuItem("SRH/SPP/Documentation", false, 100)]
+        [MenuItem("Tools/SRH/SPP/Documentation", false, 100)]
         private static void Documenation()
         {
-            Application.OpenURL($"");
+            Application.OpenURL($"https://slushyrh.com/tools/spp/slushy's-player-prefs");
         }
 
         internal static List<SPPEditor.PrefStruct> GetAllPrefs(bool isForEditor = false)
