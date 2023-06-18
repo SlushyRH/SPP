@@ -1,10 +1,14 @@
-using System.Collections;
+/*
+ * This code written by me, SlushyRH (https://github.com/SlushyRH), and all copyright goes to me.
+ * The license for this code is at https://github.com/SlushyRH/SPP/blob/master/LICENSE.
+ */
+
+using System;
 using System.Collections.Generic;
+using System.Text;
+using Microsoft.Win32;
 using UnityEngine;
 using UnityEditor;
-using Microsoft.Win32;
-using System.Text;
-using System;
 
 namespace SRH
 {

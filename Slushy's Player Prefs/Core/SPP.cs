@@ -1,13 +1,9 @@
 /*
  * This code written by me, SlushyRH (https://github.com/SlushyRH), and all copyright goes to me.
- * The license for this code is at https://github.com/SlushyRH/Advanced-Save-System/blob/master/LICENSE.
+ * The license for this code is at https://github.com/SlushyRH/SPP/blob/master/LICENSE.
  */
 
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Net.Http;
-using UnityEditor;
 using UnityEngine;
 
 namespace SRH
@@ -93,8 +89,6 @@ namespace SRH
         /// <returns>If it doesn't exist, it will return null.</returns>
         public static T Get<T>(string key)
         {
-            Debug.Log(SPP.HasKey(key) + "  " + key);
-
             if (SPP.HasKey(key))
             {
                 try

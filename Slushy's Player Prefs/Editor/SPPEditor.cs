@@ -1,13 +1,14 @@
+/*
+ * This code written by me, SlushyRH (https://github.com/SlushyRH), and all copyright goes to me.
+ * The license for this code is at https://github.com/SlushyRH/SPP/blob/master/LICENSE.
+ */
+
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEditor;
 using UnityEditorInternal;
-using Unity.VisualScripting.YamlDotNet.Core.Tokens;
-using System.Security.Cryptography;
-using Unity.Plastic.Newtonsoft.Json.Linq;
 
 namespace SRH
 {

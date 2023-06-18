@@ -1,10 +1,12 @@
 {
-    "name": "SRH",
+    "name": "SRH.SPP",
     "rootNamespace": "SRH",
-    "references": [],
+    "references": [
+        "GUID:35b6afb5a92bb9d49bf11faebb059cdd"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
-    "allowUnsafeCode": true,
+    "allowUnsafeCode": false,
     "overrideReferences": false,
     "precompiledReferences": [],
     "autoReferenced": true,

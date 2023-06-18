@@ -1,5 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
+/*
+ * This code written by me, SlushyRH (https://github.com/SlushyRH), and all copyright goes to me.
+ * The license for this code is at https://github.com/SlushyRH/SPP/blob/master/LICENSE.
+ */
+
 using UnityEngine;
 
 using SRH; // reference SRH
